@@ -1,0 +1,70 @@
+body {
+    background-color: #F0F0F0;
+    margin-top: 3.6rem; }
+  
+  .nav-arrow {
+    font-size: 32px;
+    position: absolute;
+    top: 0;
+    right: 0; }
+  
+  .nav-arrow:hover {
+    cursor: pointer; }
+  
+  .navmargin {
+    margin-top: 4em; }
+  
+  .icon {
+    font-size: 32px; }
+  
+  .logo {
+    max-width: 32px; }
+  
+  .body-area {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    position: relative;
+    min-height: 100vh; }
+  
+  .text-lt-blue {
+    color: #E4F1FF !important; }
+  
+  .text-ml-blue {
+    color: #A8D3FF !important; }
+  
+  .text-nm-blue {
+    color: #7CBCFF !important; }
+  
+  .text-md-blue {
+    color: #54A8FF !important; }
+  
+  .text-dr-blue {
+    color: #2990FC !important; }
+  
+  .text-lt-brown {
+    color: #FFF3E2 !important; }
+  
+  .text-ml-brown {
+    color: #FFD9A1 !important; }
+  
+  .text-nm-brown {
+    color: #FFC671 !important; }
+  
+  .text-md-brown {
+    color: #FFB546 !important; }
+  
+  .text-dr-brown {
+    color: #FFA218 !important; }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: #FFF3E2;
+    opacity: 0.8; }
+  
+  .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    color: #FFC671; }
+  
+  @media screen and (min-width: 767px) {
+    .head {
+      font-size: 5em; }
+    .subhead {
+      font-size: 1.4em; } }
