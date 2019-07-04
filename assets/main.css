@@ -1,0 +1,26 @@
+body {
+    background: #000000 url("img/bg-dark.jpg") no-repeat center;
+    margin: 0;
+    padding: 0;
+}
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.7);
+}
+.title {
+    font-size: 5rem;
+    color: #ffffff;
+    z-index: 5;
+}
+.flex-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+    
