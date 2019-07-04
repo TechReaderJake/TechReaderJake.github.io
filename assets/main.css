@@ -18,7 +18,11 @@ body {
     z-index: 5;
 }
 .flex-container {
-    display: flex;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;   
+    flex-wrap: wrap;
+    flex-direction: row;
     height: 100vh;
     justify-content: center;
     align-items: center;
