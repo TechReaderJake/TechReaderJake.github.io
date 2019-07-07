@@ -14,12 +14,12 @@ import Header from "./header"
 import "./css/bootstrap.min.css"
 import "./css/site.css"
 
-const Layout = ({ children }) => {
+const LayoutFull = ({ children }) => {
   
   return (
     <>
       <Header />
-      <Container className="body-area">
+      <Container fluid className="body-area">
         <main role="main" className="p-2">{children}</main>
       </Container>
       <footer className="footer text-muted text-center pt-1">
@@ -31,8 +31,8 @@ const Layout = ({ children }) => {
   )
 }
 
-Layout.propTypes = {
+LayoutFull.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default LayoutFull

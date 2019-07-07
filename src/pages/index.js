@@ -1,10 +1,11 @@
 import React from "react"
 //import { Link } from "gatsby"
 
-import Layout from "../components/layout"
 //import Image from "../components/image"
+import Layout from "../components/layout"
 import Banner from "../components/banner"
 import SEO from "../components/seo"
+import { Row, Col } from 'reactstrap';
 
 const IndexPage = () => (
   <Layout>
@@ -17,8 +18,8 @@ const IndexPage = () => (
     {/* </div> */}
     {/* <Link to="/page-2/">Go to page 2</Link> */}
     <Banner />
-    <div className="row">
-        <div className="col-lg-8">
+    <Row>
+        <Col lg="8">
             <section>
                 <h2>Indroduction</h2>
                 <p>Software Developer that specializes in web development and media design. Exposed to using
@@ -63,8 +64,8 @@ const IndexPage = () => (
                 </p>
 
             </section>
-        </div>
-        <div className="col-lg-4">
+        </Col>
+        <Col lg="4">
             <section>
                 <h2>Skills</h2>
                 <ul>
@@ -85,9 +86,7 @@ const IndexPage = () => (
                     <li>XML</li>
                     <li>XSLT</li>
                     <li>SQL</li>
-                    <li>Writing</li>
                     <li>Communication</li>
-
                 </ul>
             </section>
             <section>
@@ -114,12 +113,12 @@ const IndexPage = () => (
                     2014-2017
                 </p>
             </section>
-        </div>
-    </div>
-    <script>
+        </Col>
+    </Row>
+    {/* <script>
         var navbar = document.getElementById("main-nav");
         navbar.classList.add("d-none");
-    </script>
+    </script> */}
   </Layout>
 )
 
