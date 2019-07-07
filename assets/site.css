@@ -1,0 +1,127 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+  }
+  
+  /* Sticky footer styles
+  -------------------------------------------------- */
+  html {
+    font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  .border-top {
+    border-top: 1px solid #e5e5e5;
+  }
+  .border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  }
+  
+  .accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+  }
+  
+  /* Sticky footer styles
+  -------------------------------------------------- */
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+  }
+  .footer { 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    /*height: 60px;*/
+    line-height: 60px; /* Vertically center the text there */
+  }
+
+body {
+    background-color: #F0F0F0;
+    margin-top: 3.6rem; }
+  
+  .nav-arrow {
+    font-size: 32px;
+    position: absolute;
+    top: 0;
+    right: 0; }
+  
+  .nav-arrow:hover {
+    cursor: pointer; }
+  
+  .navmargin {
+    margin-top: 4em; }
+  
+  .icon {
+    font-size: 32px; }
+  
+  .logo {
+    max-width: 32px; }
+  
+  .body-area {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    position: relative;
+    min-height: 100vh; }
+  
+  .text-lt-blue {
+    color: #E4F1FF !important; }
+  
+  .text-ml-blue {
+    color: #A8D3FF !important; }
+  
+  .text-nm-blue {
+    color: #7CBCFF !important; }
+  
+  .text-md-blue {
+    color: #54A8FF !important; }
+  
+  .text-dr-blue {
+    color: #2990FC !important; }
+  
+  .text-lt-brown {
+    color: #FFF3E2 !important; }
+  
+  .text-ml-brown {
+    color: #FFD9A1 !important; }
+  
+  .text-nm-brown {
+    color: #FFC671 !important; }
+  
+  .text-md-brown {
+    color: #FFB546 !important; }
+  
+  .text-dr-brown {
+    color: #FFA218 !important; }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: #FFF3E2;
+    opacity: 0.8; }
+  
+  .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    color: #FFC671; }
+  
+  @media screen and (min-width: 767px) {
+    .head {
+      font-size: 5em; }
+    .subhead {
+      font-size: 1.4em; } }
