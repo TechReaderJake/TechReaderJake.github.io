@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/layout"
-import Banner from "../components/banner"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import { Row, Col } from "reactstrap"
@@ -31,9 +30,8 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO title="Home - Resume" />
-        <Banner />
         <Row>
-          <Col lg="8" className="order-sm-12">
+          <Col lg="8" className="order-lg-12">
             <section>
               <h2>Indroduction</h2>
               <p>{resume.basics.summary}</p>
@@ -47,7 +45,7 @@ class IndexPage extends React.Component {
               {this.renderArea(resume.volunteer)}
             </section>
           </Col>
-          <Col lg="4" className="order-sm-1">
+          <Col lg="4" className="order-lg-1">
             <section>
               <h2>Education</h2>
               <div className="pl-4">

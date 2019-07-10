@@ -3,7 +3,7 @@ body {
   margin-top: 3.6rem;
 }
 #banner {
-  top: 65px;
+  top: 60px;
 }
 .nav-arrow {
   font-size: 32px;
@@ -16,9 +16,9 @@ body {
   cursor: pointer;
 }
 
-.navmargin {
+/* .navmargin {
   margin-top: 4em;
-}
+} */
 
 .icon {
   font-size: 32px;

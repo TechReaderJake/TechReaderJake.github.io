@@ -8,7 +8,7 @@ class Banner extends React.Component {
     const { data } = this.props;
     const resume = data.allResumeJson.nodes[0].basics;
     return (
-      <Row id="banner" className="row mb-4 sticky-top bg-white">
+      <Row id="banner" className="row mb-1 mb-md-4 sticky-top bg-white">
         <Col lg="8">
             <h1 className="head">{resume.name}</h1>
             <p className="subhead d-md-block d-none">{resume.label} - {resume.specialty}</p>

@@ -11,6 +11,7 @@ import { Container } from "reactstrap"
 import { Link } from "gatsby"
 
 import Header from "./header"
+import Banner from "../components/banner"
 
 const Layout = ({ children }) => {
   
@@ -18,7 +19,10 @@ const Layout = ({ children }) => {
     <>
       <Header />
       <Container className="body-area">
-        <main role="main" className="p-2">{children}</main>
+        <main role="main" className="p-2">
+          <Banner />
+          {children}
+        </main>
       </Container>
       <footer className="footer text-muted text-center pt-1">
         <Container>

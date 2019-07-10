@@ -21,9 +21,7 @@ const LayoutFull = ({ children }) => {
         <main role="main" className="p-2">{children}</main>
       </Container>
       <footer className="footer text-muted text-center pt-1">
-        <Container>
         © {new Date().getFullYear()} - jacobashcraft.com - <Link to="/Privacy">Privacy</Link>
-        </Container>
       </footer>
     </>
   )

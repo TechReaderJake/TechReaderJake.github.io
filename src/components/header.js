@@ -48,13 +48,13 @@ class Header extends React.Component {
                   <NavLink href="/">Resume</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#">Skills</NavLink>
+                  <NavLink href="/skills">Skills</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#">Education</NavLink>
+                  <NavLink href="/education">Education</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="#">Work Experience</NavLink>
+                  <NavLink href="/experience">Work Experience</NavLink>
                 </NavItem>
               </Nav>
               <Nav navbar>
