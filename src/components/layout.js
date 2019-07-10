@@ -11,8 +11,6 @@ import { Container } from "reactstrap"
 import { Link } from "gatsby"
 
 import Header from "./header"
-import "./css/bootstrap.min.css"
-import "./css/site.css"
 
 const Layout = ({ children }) => {
   

@@ -1,9 +1,10 @@
 
 import React from 'react';
 import logo from '../images/ja-logo-brown.png'
+import { StaticQuery, graphql } from "gatsby"
 import { Collapse, Container, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
-export default class Header extends React.Component {
+class Header extends React.Component {
   constructor(props) {
     super(props);
 
@@ -19,6 +20,17 @@ export default class Header extends React.Component {
     });
   }
   render() {
+    const { data } = this.props;
+    const resume = data.allResumeJson.nodes[0].basics.profiles;
+    const profiles = resume
+    .filter(el => el.active === true)
+    .map(item => (
+      <NavItem key={item.url}>
+        <NavLink href={item.url} target="_blank" title={item.network}>
+          <i className={"d-inline icon fab " + item.icon}></i>
+        </NavLink>
+      </NavItem>
+    ))
     return (
       <header>
         <Navbar 
@@ -46,26 +58,34 @@ export default class Header extends React.Component {
                 </NavItem>
               </Nav>
               <Nav navbar>
-                <NavItem>
-                  <NavLink href="https://www.linkedin.com/in/jacob-ashcraft-21a7b595/" target="_blank" title="Linkedin">
-                    <i className="d-inline icon fab fa-linkedin"></i>
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="https://github.com/TechReaderJake" target="_blank" title="Github Primary">
-                    <i className="d-inline icon fab fa-github-square"></i>
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="https://github.com/Chillica" target="_blank" title="Github Secondary">
-                    <i className="d-inline icon fab fa-github-square"></i>
-                  </NavLink>
-                </NavItem>
+                {profiles}
               </Nav>
-            </Collapse>
+            </Collapse> 
           </Container>
         </Navbar>
       </header>
     );
   }
 }
+
+export default props => (
+  <StaticQuery
+    query={
+      graphql` {
+        allResumeJson {
+          nodes {
+            basics {
+            profiles {
+              active
+              url
+              network
+              icon
+            }
+          }
+          }
+        }
+      }`
+    }
+    render={data => <Header data={data}{...props} />}
+  />
+);
