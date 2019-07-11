@@ -1,7 +1,7 @@
 
 import React from 'react';
 import logo from '../images/ja-logo-brown.png'
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import { Collapse, Container, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 class Header extends React.Component {
@@ -33,9 +33,9 @@ class Header extends React.Component {
     ))
     return (
       <header>
-        <Navbar 
+        <Navbar
         id="main-nav"
-        color="dark" dark expand="sm" fixed="top" className="border-bottom box-shadow">
+        color="dark" dark expand="md" fixed="top" className="border-bottom box-shadow">
           <Container>
             <NavbarBrand href="/" className="mr-auto">
               <img className="img-fluid logo" src={logo}
@@ -45,22 +45,25 @@ class Header extends React.Component {
             <Collapse isOpen={!this.state.collapsed} navbar>
               <Nav navbar className="flex-grow-1">
                 <NavItem>
-                  <NavLink href="/">Resume</NavLink>
+                  <Link className="nav-link" activeClassName="active" to="/letter">Cover Letter</Link>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/skills">Skills</NavLink>
+                  <Link className="nav-link" activeClassName="active" to="/experience">Work Experience</Link>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/education">Education</NavLink>
+                  <Link className="nav-link" activeClassName="active" to="/education">Education</Link>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/experience">Work Experience</NavLink>
+                  <Link className="nav-link" activeClassName="active" to="/skills">Skills</Link>
+                </NavItem>
+                <NavItem>
+                  <Link className="nav-link" activeClassName="active" to="/blog">Blog</Link>
                 </NavItem>
               </Nav>
               <Nav navbar>
                 {profiles}
               </Nav>
-            </Collapse> 
+            </Collapse>
           </Container>
         </Navbar>
       </header>
