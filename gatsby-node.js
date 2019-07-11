@@ -8,8 +8,7 @@
 //gatsby-node.js
 const path = require(`path`)
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+exports.createPages = ({ actions: {createPage}, graphql }) => {
 
   const mdTemplate = path.resolve(`src/templates/mdTemplate.js`)
 
@@ -37,7 +36,9 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: mdTemplate,
-        context: {}, // additional data can be passed via context
+        context: { 
+          data: node.data,
+         }, // additional data can be passed via context
       })
     })
   })

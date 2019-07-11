@@ -8,7 +8,7 @@ class MdTemplate extends React.Component {
 
     return (
       <Layout>
-        {content.filter(post => post.node.frontmatter.title.length > 0)
+        {content.filter(post => (post.node.frontmatter.title.length > 0 && post.node.frontmatter.blog === "true"))
           .map(({ node: post}) => { 
             return (
               <div key={post.id}>
@@ -35,6 +35,7 @@ export const Templatequery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            blog
           }
         }
       }

@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import { graphql } from "gatsby"
 
 class MdTemplate extends React.Component {
@@ -7,11 +8,12 @@ class MdTemplate extends React.Component {
     const { markdownRemark } = this.props.data // data.markdownRemark holds our post data
     const { frontmatter, html } = markdownRemark
     return (
-        <Layout>
+      <Layout>
+        <SEO title={frontmatter.title} />
         <h1>{frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-        </Layout>
-    );
+      </Layout>
+    )
   }
 }
 

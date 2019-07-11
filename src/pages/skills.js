@@ -1,7 +1,7 @@
 import React from "react"
 //import { Link } from "gatsby"
 
-import Layout from "../components/layout-full"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 class Skills extends React.Component {
@@ -11,7 +11,6 @@ class Skills extends React.Component {
       <Layout>
         <SEO title="Skills" />
         <h1>Skills</h1>
-
       </Layout>
     )
   }
