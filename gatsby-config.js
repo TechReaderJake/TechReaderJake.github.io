@@ -1,66 +1,108 @@
+const path = require('path')
+const config = require('./data/siteConfig')
+
 module.exports = {
   siteMetadata: {
-    title: `Jacob Ashcraft`,
-    description: `Software Engineer and Web Developer`,
-    author: `@TechReaderJake - Jacob Ashcraft`,
+    title: config.siteTitle,
+    author: config.authorName,
+    description: config.siteDescription,
+    ...config,
   },
+  pathPrefix: config.pathPrefix,
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `jacob-ashcraft-site`,
-        short_name: `ja-site`,
-        start_url: `/`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
+        name: 'posts',
+        path: 'content/posts',
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/pages/md`,
+        name: 'pages',
+        path: 'content/pages',
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        // CommonMark mode (default: true)
-        commonmark: true,
-        // Footnotes mode (default: true)
-        footnotes: true,
-        // Pedantic mode (default: true)
-        pedantic: true,
-        // GitHub Flavored Markdown mode (default: true)
-        gfm: true,
-        // Plugins configs
-        plugins: [],
+        name: 'images',
+        path: 'content/images',
       },
     },
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/data/`,
+        path: `content/json`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: path.join(__dirname, `src`, `pages`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve('./src/templates/page.js'),
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 590,
+              linkImagesToOriginal: false,
+              withWebp: true,
+            },
+          },
+          { resolve: 'gatsby-remark-prismjs' },
+          { resolve: 'gatsby-remark-responsive-iframe' },
+          { resolve: 'gatsby-remark-copy-linked-files' },
+          { resolve: 'gatsby-remark-smartypants' },
+          { resolve: 'gatsby-remark-autolink-headers' },
+        ],
+      },
+    },
+    // Reminder (https://github.com/gatsbyjs/gatsby/issues/15486#issuecomment-509405867)
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-images`],
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: config.googleAnalyticsId,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: config.siteTitle,
+        short_name: config.siteTitle,
+        start_url: config.pathPrefix,
+        background_color: config.background_color,
+        theme_color: config.theme_color,
+        display: config.display,
+        icon: config.icon,
+      },
+    },
+    // https://www.gatsbyjs.org/docs/themes/converting-a-starter/#transpiling-your-theme-with-webpack
+    {
+      resolve: 'gatsby-plugin-compile-es6-packages',
+      options: {
+        modules: ['gatsby-starter-morning-dew'],
       },
     },
   ],

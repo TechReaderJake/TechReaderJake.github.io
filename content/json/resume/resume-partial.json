@@ -1,0 +1,220 @@
+{
+  "basics": {
+    "name": "Jacob Ashcraft",
+    "label": "Software Engineer",
+    "specialty": "Web Development and Media Design",
+    "email": "resume@jacobashcraft.com",
+    "location": "Sanpete County, Utah",
+    "summary": "Software Developer that specializes in web development and media design. Exposed to using Docker, Linux, Bash, Powershell, and the love of crafting useful scripts.",
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "TechReaderJake",
+        "icon": "",
+        "url": "",
+        "active": false
+      },
+      {
+        "network": "Linkedin",
+        "username": "jacobashcraft",
+        "icon": "fa-linkedin",
+        "url": "https://www.linkedin.com/in/jacob-ashcraft-21a7b595/",
+        "active": true
+      },
+      {
+        "network": "Github",
+        "username": "TechReaderJake",
+        "icon": "fa-github-square",
+        "url": "https://github.com/TechReaderJake",
+        "active": true
+      }, 
+      {
+        "network": "Github",
+        "username": "Chillica",
+        "icon": "fa-github-square",
+        "url": "https://github.com/Chillica",
+        "active": true
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Snow College",
+      "location": "Ephraim, UT",
+      "position": "Audio Visual Technician",
+      "startDate": "2017-01-17",
+      "endDate": "2019-12-31",
+      "summary": "Manage monitors, search stations, 3D printing, large format printing, studio rooms, and auditoriums.",
+      "highlights": [
+        "Communication with students and faculty",
+        "Develop documentation and graphics",
+        "Design and evelop layouts and templates for carousel monitors"
+      ],
+      "active": true
+    },
+    {
+      "name": "Snow College",
+      "location": "Ephraim, UT",
+      "position": "Web Assistant",
+      "startDate": "2015-01-10",
+      "endDate": "2019-12-31",
+      "summary": "Update and maintain website for college using OmniUpdate content management system. Write and/or correct source code for different pages. Design templates for the layout of the site.",
+      "highlights": [
+        "Designing and developing templates for the website",
+        "Perform update requests for departmental pages",
+        "Help manage, update, and correct headings, accessibility, spelling, etc."
+      ],
+      "active": true
+    },
+    {
+      "name": "Snow College",
+      "location": "Ephraim, UT",
+      "position": "Lab Technician",
+      "startDate": "2014-01-06",
+      "endDate": "2017-01-17",
+      "summary": "Help students with study rooms, printing, and lap computers. Monitor the lab for inappropriate activities.",
+      "highlights": [
+        "Seeing smiles from a grateful student",
+        "Meeting and helping a variety of people"
+      ],
+      "active": false
+    },
+    {
+      "name": "Payson Fruit Growers",
+      "location": "Payson, UT",
+      "position": "Cleaner/Mechanic/Forklift Driver",
+      "startDate": "2014-06-15",
+      "endDate": "2017-08-17",
+      "summary": "Summer seasonal work.",
+      "highlights": [
+        "Repair, maintain, and drive heavy machinery",
+        "Watchful and alert for other workers; no one ever injured",
+        "Meeting and making new friends",
+        "Learning new things, fork lift trying, fixing cherry pitters"
+      ],
+      "active": true
+    }
+  ],
+  "volunteer": [
+    {
+      "name": "Snow college",
+      "location": "Ephraim, UT",
+      "position": "Coding Camp Teacher",
+      "url": "https://www.snow.edu/academics/science_math/engineering/snowcode/index.html",
+      "startDate": "2015-06-15",
+      "endDate": "2017-06-30",
+      "summary": "Taught groups from 5th grade to high school studnets about 3D design and 3D printing, and help assist in other activities.",
+      "highlights": [
+        "Spending time with younger kids and see their imagination"
+      ],
+      "active": true
+    },
+    {
+      "name": "Snow college",
+      "location": "Ephraim, UT",
+      "position": "Badger Orientation Leader",
+      "url": "https://www.snow.edu/academics/science_math/engineering/snowcode/index.html",
+      "startDate": "2015-01-06",
+      "endDate": "2015-01-08",
+      "summary": "Campus tour guide for new students coming to Snow College",
+      "highlights": [],
+      "active": true
+    },
+    {
+      "name": "Snow college",
+      "location": "Ephraim, UT",
+      "position": "Teaching English as a Second Language",
+      "url": "https://www.snow.edu/academics/science_math/engineering/snowcode/index.html",
+      "startDate": "2015-02-01",
+      "endDate": "2015-02-21",
+      "summary": "Helped teach English to non-english speakers through games.",
+      "highlights": [],
+      "active": true
+    },
+    {
+      "name": "The Church of Jesus Christ of Latter-day Saints",
+      "location": "Atlanta, Georgia",
+      "position": "Full Time Missionary",
+      "url": "https://www.churchofjesuschrist.org",
+      "startDate": "2011-11-30",
+      "endDate": "2013-11-27",
+      "summary": "Lived, taught, and served the people of Georgia with a companion.",
+      "highlights": [
+        "Lasting memories of service",
+        "Love for the people, hills, and trees of Georgia"
+      ],
+      "active": true
+    }
+  ],
+  "education": [
+    {
+      "institution": "Snow College",
+      "area": "Compuer Science",
+      "studyShort": "AS",
+      "location": "Ephraim, UT",
+      "startDate": "2014-01-06",
+      "endDate": "2017-05-23",
+      "active": true
+    },
+    {
+      "institution": "Snow College",
+      "area": "Software Engineering",
+      "studyShort": "BS",
+      "location": "Ephraim, UT",
+      "startDate": "2017-08-25",
+      "endDate": "2019-12-15",
+      "active": true
+    }
+  ],
+  "courses": [
+    {"order": 1, "crn": "SE-3250", "name": "Survey of Languages"},
+    {"order": 2, "crn": "SE-3410", "name": "Human Factors"},
+    {"order": 3, "crn": "SE-3450", "name": "Design Patterns"},
+    {"order": 4, "crn": "SE-3520", "name": "Database Systems"},
+    {"order": 5, "crn": "SE-3620", "name": "Distributed App Dev."},
+    {"order": 6, "crn": "SE-3630", "name": "Mobile App Dev."},
+    {"order": 7, "crn": "SE-4120", "name": "Software Management"},
+    {"order": 8, "crn": "SE-4140", "name": "Social/Ethical Issues"},
+    {"order": 9, "crn": "SE-4220", "name": "Graphical User Interfaces"},
+    {"order": 10, "crn": "SE-4230", "name": "Advanced Algorithms"},
+    {"order": 11, "crn": "SE-4320", "name": "Personal Software Practices"},
+    {"order": 12, "crn": "SE-4340", "name": "Secure Coding Practices"},
+    {"order": 13, "crn": "SE-4400", "name": "SE Practicum I"},
+    {"order": 14, "crn": "SE-4450", "name": "SE Practicum II"}
+  ],
+  "skills": [
+    {"order": 1, "name":"HTML"},
+    {"order": 2, "name":"CSS"},
+    {"order": 3, "name":"SASS"},
+    {"order": 4, "name":"React"},
+    {"order": 5, "name":"Javascript"},
+    {"order": 6, "name":"MongoDB"},
+    {"order": 7, "name":"MySQL"},
+    {"order": 8, "name":"SQL"},
+    {"order": 9, "name":"UI/UX"},
+    {"order": 10, "name":"Docker"},
+    {"order": 11, "name":"C#"},
+    {"order": 12, "name":"Java"},
+    {"order": 13, "name":"XML"},
+    {"order": 14, "name":"XSLT"},
+    {"order": 15, "name":"Wordpress"},
+    {"order": -1, "name":"LESS"},
+    {"order": -1, "name":"ASP.net Core"},
+    {"order": -1, "name":"Twitter Bootstraps 3 and 4"},
+    {"order": -1, "name":"C++"},
+    {"order": -1, "name":"Bash"},
+    {"order": -1, "name":"Linux"},
+    {"order": -1, "name":"Windows"},
+    {"order": -1, "name":"Mac"},
+    {"order": -1, "name":"Android Studio"},
+    {"order": -1, "name":"Xamarin Forms"},
+    {"order": -1, "name":"Domain Driven Development (DDD)"},
+    {"order": -1, "name":"Photoshop"},
+    {"order": -1, "name":"Illustrator"},
+    {"order": -1, "name":"XD"}
+  ],
+  "meta": {
+    "version": "v1.0.0",
+    "lastModified": "2019-07-14T17:53:00"
+  }
+}

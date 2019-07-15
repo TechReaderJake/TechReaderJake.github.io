@@ -1,143 +1,147 @@
-import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { graphql } from "gatsby"
-import { Row, Col } from "reactstrap"
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import styled from 'styled-components'
+import Layout from '../components/layout'
+import Wrapper from '../components/Wrapper'
+import SEO from '../components/SEO'
+import { Text } from '../components/Commons'
+import { Row, Col, Nav, NavItem, NavLink } from "reactstrap"
 
-class IndexPage extends React.Component {
+const Area = styled.div`
+  margin-bottom: 1.2rem;
+`
+const Section = styled.section`
+  margin-bottom: 1rem;
+`
+class ResumePage extends React.Component {
   renderList(arry) {
-    var el = []
+    var el = [];
     for (var i = 0; i < arry.length; i++)
-      el.push(<li key={arry[i]}>{arry[i]}</li>)
-    return el
+      el.push(<li key={arry[i]}>{arry[i]}</li>);
+    return el;
   }
-  renderArea(arry)
+  sectionTitle(format, title)
   {
-      return arry.filter(el => el.active === true)
+    return (<Section><h2>{title}</h2>{format}</Section>);
+  }
+  renderEducation(arry, title) 
+  {
+    var format = arry.filter(el => el.active === true)
+    .map(item => (
+      <Area key={item.startDate}>
+        <strong>{item.studyShort}, {item.area}</strong><br />
+        {item.institution}, {item.location}<br />
+        {item.startDate}-{item.endDate}
+      </Area>
+    ));
+    return this.sectionTitle(format, title);
+  }
+  renderSection(arry, title) {
+    var format = <ul className="pt-0 mt-0">
+    {arry.filter(el => el.order > 0).sort(function(a, b){return a-b}).map(item => (
+      <li key={item.order}>{item.name}</li>
+    ))}
+    </ul>;
+    return this.sectionTitle(format, title);
+  }
+  renderArea(arry, title)
+  {
+    var format = 
+      arry.filter(el => el.active === true)
       .map(item => (
-        <div key={item.position}>
-          <strong>
-            {item.position}, {item.startDate}-{item.endDate}
-          </strong>
-          <br />
-          {item.name}, {item.location}
-          <ul>{this.renderList(item.highlights)}</ul>
-        </div>
-      ))
+      <Area key={item.position}>
+        <strong>
+          {item.position}, {item.startDate}-{item.endDate}
+        </strong>
+        <br />
+        {item.name}, {item.location}
+        <ul className="pt-0 mt-0">{this.renderList(item.highlights)}</ul>
+      </Area>
+    ));
+    return this.sectionTitle(format, title);
   }
   render() {
     const resume = this.props.data.allResumeJson.nodes[0]
+    const social = resume.basics.profiles
+    const profiles = social
+    .filter(el => el.active === true)
+    .map(item => (
+      <NavItem key={item.url}>
+        <NavLink href={item.url} target="_blank" title={item.network}>
+          <i className={"d-inline icon fab " + item.icon}></i>
+        </NavLink>
+      </NavItem>
+    ))
     return (
       <Layout>
         <SEO title="Home - Resume" />
-        <Row>
+        <Wrapper>
+          <Row id="banner" className="mb-1 mb-md-4">
+          <Col lg="8">
+              <h1 className="head">{resume.basics.name}</h1>
+              <p className="subhead d-md-block d-none">{resume.basics.label} - {resume.basics.specialty}</p>
+          </Col>
+          <Col lg="4">
+            <div className="d-md-flex justify-content-lg-end">
+              <p className="subhead align-self-md-center text-lg-right">{resume.basics.email}
+              <br />{resume.basics.location}</p>
+            </div>
+            <Nav className="justify-content-lg-end">{profiles}</Nav>
+          </Col>
+          </Row>
+          <Row>
           <Col lg="8" className="order-lg-12">
-            <section>
-              <h2>Indroduction</h2>
-              <p>{resume.basics.summary}</p>
-            </section>
-            <section>
-              <h2>Experience</h2>
-              {this.renderArea(resume.work)}
-            </section>
-            <section>
-              <h2>Leadership</h2>
-              {this.renderArea(resume.volunteer)}
-            </section>
+              {this.sectionTitle(<Text>{resume.basics.summary}</Text>, "Indroduction")}
+              {this.renderArea(resume.work, "Experience")}
+              {this.renderArea(resume.volunteer, "Leadership")}
           </Col>
           <Col lg="4" className="order-lg-1">
-            <section>
-              <h2>Education</h2>
-              <div className="pl-4">
-              <p>
-                <strong>BS, Software Engineering</strong>
-                <br />
-                Snow College, Ephraim, UT
-                <br />
-                2017-Current
-              </p>
-              <p>
-                <strong>AS, Computer Science</strong>
-                <br />
-                Snow College, Ephraim, UT
-                <br />
-                2014-2017
-              </p>
-              </div>
-            </section>
-            <section>
-              <h2>Coursework</h2>
-              <ul>
-                <li>Fundamentals of Programming</li>
-                <li>Object Oriented Programming</li>
-                <li>Secure Coding</li>
-                <li>Graphical User Interfaces</li>
-                <li>Technical Writing</li>
-                <li>Interpersonal Communication</li>
-              </ul>
-            </section>
-            <section>
-              <h2>Skills</h2>
-              <ul>
-                <li>C#</li>
-                <li>C++</li>
-                <li>Java</li>
-                <li>HTML</li>
-                <li>Writing</li>
-                <li>CSS/SASS/LESS</li>
-                <li>Javascript</li>
-                <li>UI/UX</li>
-                <li>Design</li>
-                <li>Wordpress</li>
-                <li>Docker</li>
-                <li>Bash</li>
-                <li>VMs</li>
-                <li>Linux</li>
-                <li>XML</li>
-                <li>XSLT</li>
-                <li>SQL</li>
-                <li>Communication</li>
-              </ul>
-            </section>           
+            {this.renderEducation(resume.education, "Education")}
+            {this.renderSection(resume.courses, "Coursework")}
+            {this.renderSection(resume.skills, "Skills")}
           </Col>
         </Row>
-        {/* <script>
-          var navbar = document.getElementById("main-nav");
-          navbar.classList.add("d-none");
-      </script> */}
+        </Wrapper>
       </Layout>
     )
   }
 }
 
-export default IndexPage
+export default ResumePage
 export const data = graphql`
   query {
     allResumeJson {
       nodes {
         basics {
+          name
+          label
+          specialty
+          email
+          location
           summary
+          profiles {
+            active
+            network
+            icon
+            url
+          }
         }
         education {
+          active
           area
-          courses {
-            active
-            crn
-            title
-          }
-          emphasis
-          gpa
           institution
           location
           studyShort
-          studyType
           startDate(formatString: "YYYY")
           endDate(formatString: "YYYY")
         }
-        skills {
-          keywords
-          level
+        courses {
           name
+          order
+        }
+        skills {
+          name
+          order
         }
         volunteer {
           active
@@ -150,11 +154,10 @@ export const data = graphql`
         }
         work {
           active
-          description
-          highlights
           name
           location
           summary
+          highlights
           position
           endDate(formatString: "YYYY")
           startDate(formatString: "YYYY")

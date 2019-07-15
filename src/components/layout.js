@@ -1,63 +1,40 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React from 'react'
+import Helmet from 'react-helmet'
+import styled from 'styled-components'
+import Header from './Header'
+import Footer from './Footer'
+import 'prismjs/themes/prism-tomorrow.css'
+import { GlobalStyle } from './Commons'
+import { media } from '../tokens'
 
-import React from "react"
-//import PropTypes from "prop-types"
-import { Container } from "reactstrap"
-import { Link } from "gatsby"
+const SiteContent = styled.div`
+  margin: 73px 0;
+  //margin: 0 0;
 
-import Header from "./header"
-import Banner from "../components/banner"
+  @media ${media.tabletn767} {
+    margin: 60px 0;
+  }
+`
 
-class Layout extends React.Component {
-  render()
-  {
-    return(
-    <>
-      <Header />
-      <Container fluid={this.props.fluid} className="body-area">
-        {console.log(this.props)}
-        <main role="main" className="p-2">
-          <Banner />
-          {this.props.children}
-        </main>
-      </Container>
-      <footer className="footer text-muted text-center pt-1">
-        <Container>
-        © {new Date().getFullYear()} - jacobashcraft.com - <Link to="/privacy">Privacy</Link>
-        </Container>
-      </footer>
-    </>
+class Template extends React.Component {
+  render() {
+    const { children } = this.props
+
+    return (
+      <>
+        <Helmet>
+          <link
+            href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
+            rel="stylesheet"
+          />
+        </Helmet>
+        <GlobalStyle />
+        <Header />
+        <SiteContent>{children}</SiteContent>
+        <Footer />
+      </>
     )
   }
 }
 
-// const Layout = ({ children }) => {
-  
-//   return (
-//     <>
-//       <Header />
-//       <Container className="body-area">
-//         <main role="main" className="p-2">
-//           <Banner />
-//           {children}
-//         </main>
-//       </Container>
-//       <footer className="footer text-muted text-center pt-1">
-//         <Container>
-//         © {new Date().getFullYear()} - jacobashcraft.com - <Link to="/Privacy">Privacy</Link>
-//         </Container>
-//       </footer>
-//     </>
-//   )
-// }
-
-// Layout.propTypes = {
-//   children: PropTypes.node.isRequired,
-// }
-
-export default Layout
+export default Template
