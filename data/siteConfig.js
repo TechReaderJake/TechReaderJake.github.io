@@ -16,10 +16,10 @@ module.exports = {
   // As a new digital nomad, he is living where the WIFI and sun is 😎 <br>
   // Do you want to know more? <a href="https://www.maxpou.fr/about" target="_blank">Visit my website!</a>
   // `,
-  siteUrl: 'https://techreaderjake.github.io/',
+  siteUrl: 'https://jacobashcraft.com/',
   disqusSiteUrl: 'https://jacobashcraft.disqus.com/',
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
-  pathPrefix: '/', // Note: it must *not* have a trailing slash.
+  pathPrefix: '', // Note: it must *not* have a trailing slash.
   siteCover: 'cover-baymax.jpeg', // file in content/images
   googleAnalyticsId: '',
   background_color: '#ffffff',
