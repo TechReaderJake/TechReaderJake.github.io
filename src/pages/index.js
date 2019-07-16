@@ -91,7 +91,7 @@ class ResumePage extends React.Component {
           </Row>
           <Row>
           <Col lg="8" className="order-lg-12">
-              {this.sectionTitle(<Text>{resume.basics.summary}</Text>, "Indroduction")}
+              {this.sectionTitle(<Text>{resume.basics.summary}</Text>, "Introduction")}
               {this.renderArea(resume.work, "Experience")}
               {this.renderArea(resume.volunteer, "Leadership")}
           </Col>
