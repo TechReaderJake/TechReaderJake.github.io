@@ -1,7 +1,7 @@
 ---
-title: "About gatsby-starter-morning-dew"
+title: "Work Experience"
 slug: work-experience
-cover: ./gatsby-cover.png
+cover: ./work-experience.jpg
 disqus: true
 ---
 

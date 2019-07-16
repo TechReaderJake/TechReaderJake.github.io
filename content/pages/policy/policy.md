@@ -1,7 +1,7 @@
 ---
-title: "About gatsby-starter-morning-dew"
+title: "Policy"
 slug: policy
-cover: ./gatsby-cover.png
+cover: ./agreement.jpg
 disqus: true
 ---
 

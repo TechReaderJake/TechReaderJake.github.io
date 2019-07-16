@@ -1,7 +1,7 @@
 ---
-title: "About gatsby-starter-morning-dew"
+title: "Cover Letter"
 slug: cover-letter
-cover: ./gatsby-cover.png
+cover: ./cover-letter.jpg
 disqus: true
 ---
 

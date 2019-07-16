@@ -1,7 +1,7 @@
 ---
-title: "About gatsby-starter-morning-dew"
+title: "Skills"
 slug: skills
-cover: ./gatsby-cover.png
+cover: ./skills.jpg
 disqus: true
 ---
 

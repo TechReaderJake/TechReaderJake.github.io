@@ -1,7 +1,7 @@
 ---
-title: "About gatsby-starter-morning-dew"
+title: "Terms of Use"
 slug: /terms-of-use
-cover: ./gatsby-cover.png
+cover: ../images/roadway.jpg
 disqus: true
 ---
 

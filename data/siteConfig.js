@@ -20,7 +20,7 @@ module.exports = {
   disqusSiteUrl: 'https://jacobashcraft.disqus.com/',
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
   pathPrefix: '', // Note: it must *not* have a trailing slash.
-  siteCover: 'cover-baymax.jpeg', // file in content/images
+  siteCover: 'roadway.jpg', // file in content/images
   googleAnalyticsId: '',
   background_color: '#ffffff',
   theme_color: '#ffc671',

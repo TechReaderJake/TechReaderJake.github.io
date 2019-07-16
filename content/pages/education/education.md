@@ -1,7 +1,7 @@
 ---
-title: "About gatsby-starter-morning-dew"
+title: "Education"
 slug: education
-cover: ./gatsby-cover.png
+cover: ./education.jpg
 disqus: true
 ---
 
