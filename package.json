@@ -30,7 +30,7 @@
     "semantic-release": "semantic-release",
     "start": "gatsby develop",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "gatsby clean && gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.0.23",
