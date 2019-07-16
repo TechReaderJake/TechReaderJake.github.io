@@ -2,7 +2,7 @@
 title: "Work Experience"
 slug: work-experience
 cover: ./work-experience.jpg
-disqus: true
+disqus: false
 ---
 
 ## More Information Coming Soon

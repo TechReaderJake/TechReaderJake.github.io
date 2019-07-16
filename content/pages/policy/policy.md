@@ -2,7 +2,7 @@
 title: "Policy"
 slug: policy
 cover: ./agreement.jpg
-disqus: true
+disqus: false
 ---
 
 ## More Information Coming Soon

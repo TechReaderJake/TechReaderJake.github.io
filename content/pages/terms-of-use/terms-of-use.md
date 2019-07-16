@@ -2,7 +2,7 @@
 title: "Terms of Use"
 slug: /terms-of-use
 cover: ../images/roadway.jpg
-disqus: true
+disqus: false
 ---
 
 ## More Information Coming Soon

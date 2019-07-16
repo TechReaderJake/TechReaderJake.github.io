@@ -2,7 +2,7 @@
 title: "Skills"
 slug: skills
 cover: ./skills.jpg
-disqus: true
+disqus: false
 ---
 
 ## More Information Coming Soon

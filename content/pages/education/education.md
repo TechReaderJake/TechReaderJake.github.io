@@ -2,7 +2,8 @@
 title: "Education"
 slug: education
 cover: ./education.jpg
-disqus: true
+
+disqus: false
 ---
 
 ## More Information Coming Soon

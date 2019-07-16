@@ -2,7 +2,7 @@
 title: "Cover Letter"
 slug: cover-letter
 cover: ./cover-letter.jpg
-disqus: true
+disqus: false
 ---
 
 ## More Information Coming Soon
