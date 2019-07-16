@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Jacob Ashcraft - Software Engineer',
+  siteTitle: 'Jacob Ashcraft',
   siteDescription: 'A Software Engineer specializing in Web Development and Digital Media Design.',
   authorName: 'Jacob Ashcraft',
   twitterUsername: 'TechReaderJake',
