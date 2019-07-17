@@ -46,7 +46,7 @@ const HeaderLinksContainer = styled.div`
   @media only screen and ${media.tabletx767} {
     display: none;
     flex-direction: column;
-    align-items: flex-start;
+    //align-items: flex-start;
   }
 `
 const IconContainer = styled.div`
