@@ -11,7 +11,7 @@ const RelatedPosts = props => {
     <ul>
       {posts.map(post => {
         const title = post.node.frontmatter.title
-        const slug = `/blog/${post.node.frontmatter.slug}`
+        const slug = `blog/${post.node.frontmatter.slug}`
         const language = post.node.frontmatter.language || 'en'
         return (
           <li key={slug}>

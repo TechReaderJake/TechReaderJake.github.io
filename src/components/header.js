@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'

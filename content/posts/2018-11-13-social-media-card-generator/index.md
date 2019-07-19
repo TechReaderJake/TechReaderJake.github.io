@@ -10,19 +10,18 @@ tags:
   - gatsby
 ---
 
-
 It's now posible to generate preview images for social networks ([Twitter](https://cards-dev.twitter.com/validator) and Facebook).
 
 ![twitter cards](./twitter-cards.png)
 
 This great idea come from a [conversation](https://twitter.com/_maxpou/status/1054106299213012992) I had with Luciano Mammino (aka [@Loige](https://twitter.com/loige)). I basically took 85% of his code. Thanks Luciano 😊
 
-
 **How to do it?**
 
 1. In a terminal, run `npm run dev`.
 2. In a second terminal, run: `npm run generatePostPreviewImages`
 3. In the post's header, add the generated images:
+
   ```yaml
   title: My blog post
   # ...
