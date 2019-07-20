@@ -7,5 +7,5 @@
 // You can delete this file if you're not using it
 require("./content/css/bootstrap.min.css")
 require("./content/css/fa-all.min.css")
-require("./content/css/plyr.css")
+// require("./content/css/plyr.css")
 

@@ -11,7 +11,7 @@ const HeroContainer = styled.div`
   width: 100%;
   height: 400px;
   overflow: hidden;
-  background-attachment: fixed;
+  //background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

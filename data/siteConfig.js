@@ -3,12 +3,12 @@ module.exports = {
   siteDescription: 'A Software Engineer specializing in Web Development and Digital Media Design.',
   authorName: 'Jacob Ashcraft',
   twitterUsername: 'TechReaderJake',
-  authorAvatar: 'avatar.jpeg', // file in content/images
+  authorAvatar: 'avatar.jpg', // file in content/images
   multilangPosts: false, // enable/disable flags in post lists
   authorDescription: `
-  For the last five years, Jacob Ashcraft has worked towards a Bachelors in Software Enineering at Snow College. 
+  For the last five years, Jacob Ashcraft has worked towards a Bachelors in Software Enineering at Snow College while raising a family. 
   He currently is a husband, and a father of two children. He focuses on front-end development and enjoys C# and the Javascript languages.
-  He enjoys reading fantasy novels, anything techy, and enjoying spending time with family.
+  He enjoys reading fantasy novels, anything techy, and spending time with family.
   `,
   // authorDescription: `
   // For the last decade, Maxence Poutord has worked with a variety of web technologies. He is currently focused on front-end development.
