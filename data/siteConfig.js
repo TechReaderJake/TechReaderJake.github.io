@@ -70,8 +70,8 @@ module.exports = {
           url: '/policy',
         },
         {
-          label: 'Installation',
-          url: '/how-to-install',
+          label: 'About Me',
+          url: '/about-me',
         },
       ],
     },
@@ -79,12 +79,12 @@ module.exports = {
       sectionName: 'Follow the author',
       links: [
         {
-          label: 'Github',
+          label: 'Github Main',
           url: 'https://github.com/techreaderjake',
         },
         {
-          label: 'Website',
-          url: 'https://www.jacobashcraft.com',
+          label: 'Github Secondary',
+          url: 'https://www.github.com/chillica',
         },
         {
           label: 'Linkedin',
