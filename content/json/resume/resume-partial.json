@@ -5,7 +5,7 @@
     "specialty": "Web Development and Media Design",
     "email": "resume@jacobashcraft.com",
     "location": "Sanpete County, Utah",
-    "summary": "Software Developer that specializes in web development and media design. Exposed to using Docker, Linux, Bash, Powershell, and the love of crafting useful scripts.",
+    "summary": "Software Developer who specializes in web development and media design. Some knowledge in using Docker, Linux, Bash, Powershell, and the love of crafting useful scripts.",
     "profiles": [
       {
         "network": "Twitter",
@@ -46,9 +46,9 @@
       "endDate": "2019-12-31",
       "summary": "Manage monitors, search stations, 3D printing, large format printing, studio rooms, and auditoriums.",
       "highlights": [
-        "Communication with students and faculty",
-        "Develop documentation and graphics",
-        "Design and evelop layouts and templates for carousel monitors"
+        "Communicates with students and faculty",
+        "Develops documentation and graphics",
+        "Designs and develops layouts and templates for carousel monitors"
       ],
       "active": true
     },
@@ -58,7 +58,7 @@
       "position": "Web Assistant",
       "startDate": "2015-01-10",
       "endDate": "2019-12-31",
-      "summary": "Update and maintain website for college using OmniUpdate content management system. Write and/or correct source code for different pages. Design templates for the layout of the site.",
+      "summary": "Updates and maintains website for college using OmniUpdate content management system. Write and/or correct source code for different pages. Design templates for the layout of the site.",
       "highlights": [
         "Designing and developing templates for the website",
         "Perform update requests for departmental pages",
@@ -87,10 +87,10 @@
       "endDate": "2017-08-17",
       "summary": "Summer seasonal work.",
       "highlights": [
-        "Repair, maintain, and drive heavy machinery",
-        "Watchful and alert for other workers; no one ever injured",
+        "Repaired, maintained, and drived heavy machinery",
+        "Was Watchful and alert for other workers; no one ever injured",
         "Meeting and making new friends",
-        "Learning new things, fork lift trying, fixing cherry pitters"
+        "Learning new things, driving fork lift, fixing cherry pitters"
       ],
       "active": true
     }
@@ -105,7 +105,7 @@
       "endDate": "2017-06-30",
       "summary": "Taught groups from 5th grade to high school studnets about 3D design and 3D printing, and help assist in other activities.",
       "highlights": [
-        "Spending time with younger kids and see their imagination"
+        "Spending time with younger kids and help increase their imagination"
       ],
       "active": true
     },
@@ -116,7 +116,7 @@
       "url": "https://www.snow.edu/academics/science_math/engineering/snowcode/index.html",
       "startDate": "2015-01-06",
       "endDate": "2015-01-08",
-      "summary": "Campus tour guide for new students coming to Snow College",
+      "summary": "Was campus tour guide for new students coming to Snow College",
       "highlights": [],
       "active": true
     },
