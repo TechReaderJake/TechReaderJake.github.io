@@ -1,0 +1,125 @@
+---
+title: "Asp.net Web Api with MongoDB"
+slug: webapi-mongodb
+date: 2019-09-14
+language: en
+cover: ./gadget-laptop.jpg
+imageTw: ./gatsby-starter-morning-dew-v1-1-tw.png
+imageFb: ./gatsby-starter-morning-dew-v1-1-fb.png
+tags:
+  - api
+  - asp.net
+  - csharp
+  - repository pattern
+---
+<!-- published: false -->
+import VideoPlayer from '../src/components/VideoPlayer'
+
+## Brief Overview
+This is not a full blown tutorial of creating a web api or using MongoDB. 
+It is a demonstration of my understanding of how to create and use an API.
+
+As an aspiring Software Engineer, I have started learning how to write APIs with Microsofts Asp.net Web API. 
+I have created a simple CRUD API using a Book model that will be stored in a MongoDB backend. 
+This API will then be used in later posts in a ReactJS, AngularJS, and a Razor Application 
+to demonstrate my skills with creating these different applicaitons with an API I have created.
+
+## Design and Usage
+![UML Mockup](./WebApiRepositoryPattern.png)
+
+## Hands On
+
+### Project Creation
+
+### The Code
+
+```json
+// File: books.api.v1/appsettings.json
+{
+  "DatabaseSettings": {
+    "DatabaseName": "BooksDb",
+    "ConnectionString": "mongodb://localhost:27017"
+  }
+  ...
+}
+```
+
+```csharp
+// File: books.api.v1/Services/Repositories/IRepository.cs
+public interface IRepository<TEntity, TPrimaryKey> where TEntity : IEntity<TPrimaryKey>
+{
+    TEntity Get(string id);
+    IEnumerable<TEntity> GetAll();
+    IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
+
+    TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate);
+
+    void Add(TEntity entity);
+    void AddRange(IEnumerable<TEntity> entities);
+
+    void Remove(TEntity entity);
+    void RemoveRange(IEnumerable<TEntity> entities);
+    void Remove(string id);
+    void RemoveRange(IEnumerable<string> id);
+}
+public interface IEntity<out TKey>
+{
+    string Id { get; }
+}
+```
+
+```csharp
+// File: books.api.v1/Services/Repositories/IBookRepository.cs
+public interface IBookRepository : IRepository<Book, string>
+{
+    IEnumerable<Book> GetBooksWithDescriptions(int id);
+}
+```
+```csharp
+// File: books.api.v1/Models/Book.cs
+public class Book : IEntity<string>
+{
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public string Authors { get; set; }
+    public string Genre { get; set; }
+    public int Words { get; set; }
+    public int Pages { get; set; }
+    public int Chapters { get; set; }
+    public DateTime Created { get; set; }
+    public DateTime Modified { get; set; }
+
+}
+```
+
+Full code can be found on [Github](https://github.com/TechReaderJake/MongoDbWebApi).
+The project is named MongoDbWebApi.
+
+### Running the Application
+Visual Studio is great to use when running the application.
+Once we have everything ready we can run the application by hitting F5 or clicking the run button. 
+Once it is running we can test it using [Postman](https://getpostman.com).
+Postman is an application that we can install locally and test local API endpoint requests.
+
+## Demo
+<VideoPlayer src="r9xlSr0q_Vw" />
+
+## Unfamilar Terms
+- API
+    - Is an acronym that stands for Application Programming Interface.
+    This is usually done by exposing specific endpoints (ex: URLs) to allow others with a token
+    make controlled calls to an applications data.
+- CRUD
+    - Is an acronym that stands for Create, Read, Update, Delete.
+- Repostiory Pattern
+    - Is a programming pattern that allows a separation of concerns. 
+    In other words a decoupling of programming parts.
+
+## Resources
+- [Microsoft MongoDB Tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app?view=aspnetcore-2.2&tabs=visual-studio#add-a-configuration-model-1)
+- [Repository Pattern](https://www.youtube.com/watch?v=rtXpYpZdOzM)
+- [Web Api MongoDB](https://github.com/fpetru/WebApiMongoDB)
+- [Bethany's Pie Shop Mobile](https://github.com/GillCleeren/BethanysPieShopMobile)

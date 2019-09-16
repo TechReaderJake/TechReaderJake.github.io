@@ -75,15 +75,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
 
-    createPage({
-      path: `/blog/${post.node.frontmatter.slug}`,
-      component: BlogPostTemplate,
-      context: {
-        slug: post.node.frontmatter.slug,
-        previous,
-        next,
-      },
-    })
+    //if (post.node.frontmatter.published)
+    //{
+      createPage({
+        path: `/blog/${post.node.frontmatter.slug}`,
+        component: BlogPostTemplate,
+        context: {
+          slug: post.node.frontmatter.slug,
+          previous,
+          next,
+        },
+      })
+
 
     // generate post share images (dev only)
     if (process.env.gatsby_executing_command.includes('develop')) {
@@ -108,6 +111,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     }
+  //}
   })
 
   // generate pages
