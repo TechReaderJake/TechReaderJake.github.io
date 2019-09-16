@@ -1,38 +1,73 @@
 ---
-title: "Asp.net Web Api with MongoDB"
+title: "Asp.net Core Web Api with MongoDB"
 slug: webapi-mongodb
 date: 2019-09-14
 language: en
 cover: ./gadget-laptop.jpg
 imageTw: ./gatsby-starter-morning-dew-v1-1-tw.png
 imageFb: ./gatsby-starter-morning-dew-v1-1-fb.png
+generate-card: true
 tags:
   - api
   - asp.net
   - csharp
   - repository pattern
 ---
-<!-- published: false -->
-import VideoPlayer from '../src/components/VideoPlayer'
+
+import VideoPlayer from '../../../src/components/VideoPlayer'
 
 ## Brief Overview
 This is not a full blown tutorial of creating a web api or using MongoDB. 
-It is a demonstration of my understanding of how to create and use an API.
+It is a demonstration of my understanding of how to create and use an (API)[#unfamilar-terms].
 
-As an aspiring Software Engineer, I have started learning how to write APIs with Microsofts Asp.net Web API. 
+As an aspiring Software Engineer, I have started learning how to write APIs with Microsoft's Asp.net Core Web API. 
 I have created a simple CRUD API using a Book model that will be stored in a MongoDB backend. 
 This API will then be used in later posts in a ReactJS, AngularJS, and a Razor Application 
 to demonstrate my skills with creating these different applicaitons with an API I have created.
 
+For this application I will be using Visual Studio 2019 to create and run the developed app. 
+Visual Studio and MongoDB will need to be installed and running. MongoDB will also need a database name and collection with sample data.
+The database name I have chosen is `BooksDB` and the collection is called `Books`. 
+MongoDB is case sensitive and when using the MongoDB Driver NuGet package 
+when matching up the database name, collection, and field names, will match the letter-case found in the MongoDB. 
+This can be remedied for the model by using `BSON` helpers when pulling the in the model fields. 
+
+This application will be using a `Book` model and test out the (CRUD)[#unfamilar-terms] API endpoints.
+
 ## Design and Usage
+In designing my application I viewed different tutorials and other people's explanations
+of how to use the Repository Pattern and how to create an API using Asp.net Web Core. 
+These [resources](#resources) can be found below.
+
+In creating my API, I used generics to allow less coupling of code. This design will allow extensability 
+to other `model objects` other than the `Book Model Object` I decided to use. I chose this because Microsoft
+original tutorial I found combining MongoDB with Asp.net Core Web API used a book model. As well as several of their
+other tutorials discussing APIs used the book Model.
+
+Here is a diagram representing my flow of interfaces and objects. The items with green background are objects that are
+instantiated and are extending or using several different interfaces or other implementations.
+
 ![UML Mockup](./WebApiRepositoryPattern.png)
 
-## Hands On
+The diagram above depics an IRepository, IBookRepository, IDatabaseSettings, and a IUnitOfWork as the interfaces.
+The IBookRepository extends the IRepository, and adds its own methods dealing specifically with books. 
+The BookRepository object then implements those added methods and inherits the already 
+implemented IRepository methods from the Repository object.
 
-### Project Creation
+The AppDbContext object receives an IDatabaseSettings through its constructor that is implemented by the DatabaseSettings object. 
+The DatabaseSettings is then instantiated and injected into the AppDbContext parameter on application startup. 
+AppDbContext is also instantiated on startup. The AppDbContext instantiation is then passed into the UnitOfWork through one of its parameters
+and is instantiated in the BooksController.
+
+The BooksController is where all the API calls are received and executed and it uses the methods given by the UnitOfWork. 
+The UnitOfWork also instantiates an instance of the BookRepository on its creation. 
+Now all the methods from the IRepository and IBookRepository are available to the BooksController through the UnitOfWork object.
+
+## Hands On
+Now it is time to get our hands working. I will show a few snippets of the code I have.
 
 ### The Code
-
+The json file below is where we will set up our database settings.
 ```json
 // File: books.api.v1/appsettings.json
 {
@@ -44,6 +79,7 @@ to demonstrate my skills with creating these different applicaitons with an API 
 }
 ```
 
+The code below is a sample declaration of the `IRepository`.
 ```csharp
 // File: books.api.v1/Services/Repositories/IRepository.cs
 public interface IRepository<TEntity, TPrimaryKey> where TEntity : IEntity<TPrimaryKey>
@@ -68,6 +104,7 @@ public interface IEntity<out TKey>
 }
 ```
 
+The code below is sample interface for the `IBookRepository`.
 ```csharp
 // File: books.api.v1/Services/Repositories/IBookRepository.cs
 public interface IBookRepository : IRepository<Book, string>
@@ -75,6 +112,7 @@ public interface IBookRepository : IRepository<Book, string>
     IEnumerable<Book> GetBooksWithDescriptions(int id);
 }
 ```
+The code below is the `Book` model I will be using.
 ```csharp
 // File: books.api.v1/Models/Book.cs
 public class Book : IEntity<string>
@@ -99,12 +137,14 @@ Full code can be found on [Github](https://github.com/TechReaderJake/MongoDbWebA
 The project is named MongoDbWebApi.
 
 ### Running the Application
-Visual Studio is great to use when running the application.
-Once we have everything ready we can run the application by hitting F5 or clicking the run button. 
+Once we have all the code ready ([fell free to download the code from my repo](https://github.com/TechReaderJake/MongoDbWebApi)) 
+and matched up we can run the application by hitting F5 or clicking the run button in Visual Studio.
 Once it is running we can test it using [Postman](https://getpostman.com).
 Postman is an application that we can install locally and test local API endpoint requests.
 
 ## Demo
+Here is a demo of the working API using the Repository Pattern and testing the endpoints with Postman.
+
 <VideoPlayer src="r9xlSr0q_Vw" />
 
 ## Unfamilar Terms
