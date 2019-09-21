@@ -73,7 +73,7 @@ module.exports = {
       sectionName: 'Follow the author',
       links: [
         {
-          label: 'Github Main',
+          label: 'Github',
           url: 'https://github.com/techreaderjake',
         },
         /*{
