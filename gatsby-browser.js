@@ -9,4 +9,3 @@ require("./content/css/bootstrap.min.css")
 require("./content/css/fa-all.min.css")
 require("./content/css/custom.css")
 // require("./content/css/plyr.css")
-

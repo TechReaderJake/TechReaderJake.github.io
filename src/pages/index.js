@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/layout'
-import Wrapper from '../components/Wrapper'
+import Wrapper from '../components/WrapperResume'
 import SEO from '../components/SEO'
 import { Text } from '../components/Commons'
 import { Row, Col, Nav, NavItem, NavLink } from "reactstrap"
@@ -76,7 +76,7 @@ class ResumePage extends React.Component {
       <Layout>
         <SEO title="Home - Resume" />
         <Wrapper>
-          <Row id="banner" className="mb-1 mb-md-4 resume-header">
+          <Row id="banner" className="mb-2 mb-md-4 resume-header">
           <Col lg="8" className="p-0">
               <h1 className="head">{resume.basics.name}</h1>
               <p className="subhead d-md-block d-none"><em>{resume.basics.label} - {resume.basics.specialty}</em></p>

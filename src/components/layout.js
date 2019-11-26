@@ -28,6 +28,7 @@ class Template extends React.Component {
             href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
             rel="stylesheet"
           />
+          
           {/* <script src="plyr.js" type="text/javascript" />
           <script src="plyr.init.js" type="text/javascript" /> */}
         </Helmet>

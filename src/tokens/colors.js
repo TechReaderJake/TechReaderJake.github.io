@@ -11,6 +11,7 @@ const theme = {
   themeBrown300: '#ffc671',
   themeBrown400: '#ffb546',
   themeBrown500: '#ffa218',
+  themeGold: '#f4a032',
   // Blues
   //themeRGB: rgba(228,241,255,1);
   //themeRGB: rgba(168,211,255,1);
