@@ -27,6 +27,7 @@ const SEO = props => {
       <html lang={lang} />
       <meta name="description" content={description} />
       <link rel="canonical" href={formatedSiteUrl + withPrefix(path)} />
+      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"></link>
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={formatedSiteUrl + withPrefix(path)} />

@@ -20,7 +20,7 @@ module.exports = {
   theme_color: '#ffc671',
   display: 'standalone',
   icon: 'content/images/ja-logo-brown.png',
-  postsPerPage: 2,
+  postsPerPage: 10,
   disqusShortname: 'jacobashcraft',
   headerTitle: 'Jacob Ashcraft',
   headerLinksIcon: 'ja-logo-brown.png', //  (leave empty to disable: '')
@@ -28,6 +28,10 @@ module.exports = {
     {
       label: 'Cover Letter',
       url: '/cover-letter',
+    },
+    {
+      label: 'Design',
+      url: '/design'
     },
     /*{
       label: 'Work Experience',

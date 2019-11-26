@@ -33,7 +33,7 @@
         "username": "Chillica",
         "icon": "fa-github-square",
         "url": "https://github.com/Chillica",
-        "active": true
+        "active": false
       }
     ]
   },
@@ -88,30 +88,30 @@
       "endDate": "2017-08-17",
       "summary": "Summer seasonal work.",
       "highlights": [
-        "Repaired, maintained, and drived heavy machinery",
+        "Repaired, maintained, and driven heavy machinery",
         "Was Watchful and alert for other workers; no one ever injured",
         "Meeting and making new friends",
-        "Learned new things, drived fork lift, fixed cherry pitters"
+        "Learned new things, driven fork lift, fixed cherry pitters"
       ],
       "active": true
     }
   ],
   "volunteer": [
     {
-      "name": "Snow college",
+      "name": "Snow College",
       "location": "Ephraim, UT",
       "position": "Coding Camp Teacher",
       "url": "https://www.snow.edu/academics/science_math/engineering/snowcode/index.html",
       "startDate": "2015-06-15",
       "endDate": "2017-06-30",
-      "summary": "Taught groups from 5th grade to high school studnets about 3D design and 3D printing, and help assist in other activities.",
+      "summary": "Taught groups from 5th grade to high school students about 3D design and 3D printing, and help assist in other activities.",
       "highlights": [
         "Spending time with younger kids and help increase their imagination"
       ],
       "active": true
     },
     {
-      "name": "Snow college",
+      "name": "Snow College",
       "location": "Ephraim, UT",
       "position": "Badger Orientation Leader",
       "url": "https://www.snow.edu/academics/science_math/engineering/snowcode/index.html",
@@ -150,7 +150,7 @@
   "education": [
     {
       "institution": "Snow College",
-      "area": "Compuer Science",
+      "area": "Computer Science",
       "studyShort": "AS",
       "location": "Ephraim, UT",
       "startDate": "2014-01-06",
@@ -198,7 +198,7 @@
     {"order": 12, "name":"Java"},
     {"order": 13, "name":"XML"},
     {"order": 14, "name":"XSLT"},
-    {"order": 15, "name":"Wordpress"},
+    {"order": 15, "name":"WordPress"},
     {"order": -1, "name":"LESS"},
     {"order": -1, "name":"ASP.net Core"},
     {"order": -1, "name":"Twitter Bootstraps 3 and 4"},

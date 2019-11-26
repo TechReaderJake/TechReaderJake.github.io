@@ -22,7 +22,7 @@ class ResumePage extends React.Component {
   }
   sectionTitle(format, title)
   {
-    return (<Section><h2>{title}</h2>{format}</Section>);
+    return (<Section><h2 className="text-blue">{title}</h2>{format}</Section>);
   }
   renderEducation(arry, title) 
   {
@@ -76,26 +76,26 @@ class ResumePage extends React.Component {
       <Layout>
         <SEO title="Home - Resume" />
         <Wrapper>
-          <Row id="banner" className="mb-1 mb-md-4">
-          <Col lg="8">
+          <Row id="banner" className="mb-1 mb-md-4 resume-header">
+          <Col lg="8" className="p-0">
               <h1 className="head">{resume.basics.name}</h1>
-              <p className="subhead d-md-block d-none">{resume.basics.label} - {resume.basics.specialty}</p>
+              <p className="subhead d-md-block d-none"><em>{resume.basics.label} - {resume.basics.specialty}</em></p>
           </Col>
-          <Col lg="4">
+          <Col lg="4" className="p-0">
             <div className="d-md-flex justify-content-lg-end">
-              <p className="subhead align-self-md-center text-lg-right">{resume.basics.email}
-              <br />{resume.basics.location}</p>
+              <p className="subhead align-self-md-center text-lg-right">{resume.basics.email}</p>
             </div>
             <Nav className="justify-content-lg-end">{profiles}</Nav>
           </Col>
           </Row>
           <Row>
-          <Col lg="8" className="order-lg-12">
+          <Col lg="8" className="order-lg-12 resume-rs">
               {this.sectionTitle(<Text>{resume.basics.summary}</Text>, "Introduction")}
               {this.renderArea(resume.work, "Experience")}
               {this.renderArea(resume.volunteer, "Leadership")}
+              <p><strong>Using GraphQL to pull resume in from JSON.</strong></p>
           </Col>
-          <Col lg="4" className="order-lg-1">
+          <Col lg="4" className="order-lg-1 resume-ls">
             {this.renderEducation(resume.education, "Education")}
             {this.renderSection(resume.courses, "Coursework")}
             {this.renderSection(resume.skills, "Skills")}
@@ -117,7 +117,6 @@ export const data = graphql`
           label
           specialty
           email
-          location
           summary
           profiles {
             active
