@@ -31,7 +31,7 @@ module.exports = {
     },
     {
       label: 'Design',
-      url: '/design'
+      url: '/design/'
     },
     /*{
       label: 'Work Experience',
