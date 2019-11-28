@@ -57,6 +57,21 @@ color: #f4a032;
     height: 100%;
 }
 
+.mason-item {
+  position: relative;
+  border: 1px solid #4e87c6;
+  margin: 8px;
+}
+
+.mason-item img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
 .middle {
   transition: .5s ease;
   opacity: 0;
@@ -66,38 +81,62 @@ color: #f4a032;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: left;
+  z-index: 4;
 }
 
-.mason-item {
-  position: relative;
-  float: left;
-  /* width: 100px;
-  height: 100px; */
+.mason-item:hover .img-overlay {
+  background-color: rgba(0,0,0,.7);
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transition: .5s ease-in-out;
 }
-/* .mason-item.thumbnail { width:  150px;height: 150px; }
-.mason-item.medium { width:  300px;height: 100px; }
-.mason-item.large { width:  100px;height: 300px; } */
-
-.mason-item img {
+/* .mason-item:hover .img-overlay img {
   opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  width: 100%;
-}
-.mason-item:hover img {
-  opacity: 0.3;
-}
+} */
+
 .mason-item:hover .middle {
   opacity: 1;
 }
+
+.mason-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.mason-column {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.mason-column img {
+  vertical-align: middle;
+  width: 100%;
+}
+
 .mason-text {
   background-color: #4e87c6;
   color: #f4a032;
   font-size: 16px;
   padding: 8px 16px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .mason-column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
 }
 
 @media (max-width: 525px) {
@@ -106,5 +145,10 @@ color: #f4a032;
     }
     .resume-ls {
         border-radius: 0 0 5px 5px;
+    }
+    .mason-column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
     }
 }
