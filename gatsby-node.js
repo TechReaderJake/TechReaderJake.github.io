@@ -59,7 +59,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   Array.from({ length: nbPages }).forEach((_, i) => {
     createPage({
-      path: i === 0 ? `/blog` : `/blog/pages/${i + 1}`,
+      path: i === 0 ? `/portfolio-collection` : `/portfolio-collection/pages/${i + 1}`,
       component: ListPostsTemplate,
       context: {
         limit: postsPerPage,
@@ -78,7 +78,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     //if (post.node.frontmatter.published)
     //{
       createPage({
-        path: `/blog/${post.node.frontmatter.slug}`,
+        path: `/portfolio-collection/${post.node.frontmatter.slug}`,
         component: BlogPostTemplate,
         context: {
           slug: post.node.frontmatter.slug,

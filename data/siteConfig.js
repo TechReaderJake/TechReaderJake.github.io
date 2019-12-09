@@ -26,12 +26,16 @@ module.exports = {
   headerLinksIcon: 'ja-logo-brown.png', //  (leave empty to disable: '')
   headerLinks: [
     {
-      label: 'Cover Letter',
-      url: '/cover-letter',
+      label: 'Portfolio Collection',
+      url: '/portfolio-collection/',
     },
     {
       label: 'Design',
       url: '/design/'
+    },
+    {
+      label: 'About Me',
+      url: '/about-me/',
     },
     /*{
       label: 'Work Experience',
@@ -45,10 +49,6 @@ module.exports = {
       label: 'Skills',
       url: '/skills',
     },*/
-    {
-      label: 'Blog',
-      url: '/blog',
-    },
   ],
   // Footer information (ex: Github, Netlify...)
   websiteHost: {
