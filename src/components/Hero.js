@@ -26,7 +26,7 @@ const TitleContainer = styled.div`
 
 const HeroTitle = styled.h1`
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 4.5rem;
   margin: 10px 60px;
   color: ${colors.white};
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85);
